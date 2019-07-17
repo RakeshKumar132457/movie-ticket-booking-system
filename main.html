@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Project">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Rakesh Kumar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="posters/popcorn.png" />
+
+<title>
+PopCornShow - Movie Tickets
+</title>
+
+<!-- Styling for Website using CSS!! -->
+
+<style>
+
+
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.header {
+    padding: 80px;
+    text-align: center;
+    color: white;
+	background-image:url('posters/city1.jpg')
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.navbar {
+	
+    overflow: hidden;
+    background-color: rgb(109, 132, 211);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+		opacity:0.9;
+		color: black;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.row{
+	background-color:#f0f0f0;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  font-size:20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 15px;
+  color: white;
+  background-color: rgb(109, 132, 211);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  opacity:0.5;
+}
+
+
+tr,th{
+	border:1px solid black;
+	color:black;
+	padding:6px;
+	border-spacing:3px;
+}
+
+.blog{
+	margin-top:10px;
+	text-align:center;
+	background-color:#f0f0f0;
+	
+}
+
+.bcont {
+	display:inline;
+	padding:10px;
+	margin-top:15px;
+}
+
+.laugh {
+	position:absolute;
+	color:white;
+	left:80px;
+	bottom:-1380px;
+	font-size:20px;
+}
+
+.learn	 {
+	position:absolute;
+	color:white;
+	left:700px;
+	bottom:-1380px;
+	font-size:20px
+}
+
+
+.avi, .jla {
+	height:400px;
+	width: 600px;
+}
+
+img:hover{
+	 opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+
+.footer {
+	text-align:center;
+	margin-top:10px;
+	font-size:10px
+	
+}
+.fcontainer{
+	display:flex;
+}
+
+.news , .country , .help{
+	width:33%;
+}
+.news>p , .country>p , .help>p{
+	font-size:13px
+}
+
+.aviblog{
+	text-decoration:none;
+	color:white;
+}
+
+.jlablog{
+	text-decoration:none;
+	color:white;
+}
+
+.aviblog:hover{
+	border:solid;
+	border-color:LightGray;
+	background-color:LightGray;
+}
+
+.jlablog:hover{
+	border:solid;
+	border-color:LightGray;
+	background-color:LightGray;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+	margin-top:14px;
+	background-color:#787878;
+	color:white;	
+	height:100%;	
+	font-size:30px;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+	margin-top:20px	
+}
+	
+.strike > hr{
+	color:white;
+}
+	
+ .strike > span:before,
+ .strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: white;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+	margin-left: 15px;
+}
+
+.right{
+	font-size:15px;
+	text-align:center;
+}
+
+.icons{
+	padding:20px;
+}
+
+.icons > img{
+	padding:5px;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color:  rgb(109, 132, 211);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 20%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%;
+	height:70%;
+	border-radius:50px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.comments{
+	margin-top:30px;
+	margin-bottom:30px;
+	background-color:#f0f0f0;
+	height:100%;
+	padding-left:30px;
+	padding-right:30px
+
+}
+
+.comments > h1{
+	text-align:center;
+}
+
+.signupbtn{
+	 background-color: rgb(109, 132, 211);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	font-size:20px;
+}
+
+.review{
+	height:100px;
+}
+
+.row >h1{
+	text-align:center;
+}
+
+
+</style>
+
+<title>
+</title>
+
+<!--Body of the website -->
+
+<body>
+
+<!--Heading and Link bar -->
+
+<div class="header">
+  <h1>PopCornShow</h1>
+</div>
+
+<div class="navbar">
+  <a href="#">HOME</a>
+  <a href="#blogs">BLOG</a>
+  <a href="index.html" class= "right"style="width:auto;">LOG OUT</a>
+</div>
+<br>
+<br>
+
+<!-- Login Page -->
+
+<div id="idlogin" class="modal">
+  
+  <form class="modal-content animate" action="book.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('idlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="posters/popcorn.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="Movie Name"><b>Movie Name</b></label>
+      <input type="text" placeholder="Enter Movie Name*" name="movie_name" required>
+
+      <label for="tickQty"><b>Number of Tickets</b></label>
+      <input id="tktsum" type="text" placeholder="Enter Number of tickets*"  name="quantity" required>
+        
+      <input type="submit" class = "button" onclick="document.forms['revsystem'].reset" value="BOOK">
+     </div>   
+  </form>
+</div>
+
+
+<!-- Container for the posters -->
+
+<div class="row"><br>
+<h1>Movies in Theaters </h1><hr width="150px" size="2px" color="black"><br>
+  <div class="column">
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=XQFb12N0Arc" target="_blank"><img src="posters/parmanu.jpg" alt="Avengers" style="width:100%"></a>
+      <div class="container">
+        <h2> Parmanu: The Story of Pokhram</h2>
+        <p class="title">English</p>
+		<table>
+			<tr>
+				<th>ACTION</th>
+				<th>DRAMA</th>
+				<th>HISTORY</th>
+			</tr>
+		</table>
+		<p><button class="button"  onclick="document.getElementById('idlogin').style.display='block'">BOOK NOW</button></p>
+		<p><button class="button" onclick="window.open('https://www.youtube.com/watch?v=XQFb12N0Arc','_blank')">WATCH TRAILER</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=jPEYpryMp2s" target="_blank"><img src="posters/solo.jpeg"  alt="Solo" style="width:100%"></a>
+      <div class="container">
+        <h2>Solo:A star wars story</h2>
+        <p class="title">English</p>
+		<table>
+			<tr>
+				<th>ACTION</th>
+				<th>ADVENTURE</th>
+				<th>SCI-FI</th>
+			</tr>
+		</table>
+        <p><button class="button"  onclick="document.getElementById('idlogin').style.display='block'">BOOK NOW</button></p>
+		<p><button class="button" onclick="window.open('https://www.youtube.com/watch?v=jPEYpryMp2s','_blank')">WATCH TRAILER</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="https://www.youtube.com/watch?v=D86RtevtfrA" target="_blank"><img src="posters/deadpool2.jpg"  alt="Deadpool 2" style="width:100%"></a>
+      <div class="container">
+        <h2>Deadpool 2</h2>
+        <p class="title">English</p>
+        <table>
+			<tr>
+				<th>ACTION</th>
+				<th>ADVENTURE</th>
+				<th>COMEDY</th>
+			</tr>
+		</table>
+		<div>
+			<p><button class="button"  onclick="document.getElementById('idlogin').style.display='block'">BOOK NOW</button></p>
+			<p><button class="button" onclick="window.open('https://www.youtube.com/watch?v=D86RtevtfrA','_blank')">WATCH TRAILER</button></p>
+	    </div>
+	  </div>
+    </div>
+  </div>
+ </div>
+ 
+<div class="blog" id="blogs">
+<br>
+	<div class="bblog">
+	<h1 style="margin-top:20px;">From our Blog</h1><hr width="100px" size="2px" color="black" >	<br>
+		<div class="bcont">
+		<img src ="posters/avi.jpg" class="avi">
+		<div class="laugh"><a class="aviblog" href="http://www.digitalspy.com/movies/the-avengers/news/a805441/why-avengers-4-isnt-infinity-war-part-2-anymore/" >Why Avengers 4 isn't called Infinity War - Part 2 anymore</a></div>
+		</div>
+		<div class="bcont">
+		<img src ="posters/jla.jpg" class="jla">
+		<div class="learn"><a class="jlablog" href="https://screenrant.com/justice-league-2-story-details-no-snyder/" > What Will Justice League 2 Be About Now Snyder's Gone?</a></div>
+		</div>
+	</div>
+	<br>
+</div>	
+
+<div class="comments">
+<br>
+<h1>Review Our Latest Movies</h1><hr width="300px" size="2px" color="black" ><br>
+<form  name = "revsystem" action="review.php" method="post">
+	<label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" >
+
+     <label for="moviename"><b>Movie Name</b></label>
+      <input type="text" placeholder="Enter Movie's Name" name="moviename" >
+
+	  <label for="review"><b>Review</b></label>
+      <input type="text" placeholder="Review" name="review" class="review" >
+	  <button type="submit"  class="signupbtn" >Submit Review</button>
+</form>
+<br>
+</div>
+	
+
+<div class="strike">
+<span>PopCornShow</span><hr width="120px" size="2px" color="black" >
+	<div class="footer">
+	<div class="fcontainer">
+		<div class="news">
+			<h1>NEWS</h1><hr width="50px" size="2px" color="black" style="color:white;">
+			<p>Entertainment Blog</p>
+			<p>Press Release</p>
+			<p>Press Coverage</p>
+			<p>Current Openings</p>
+		</div>
+		<div class="country">
+			<h1>COUNTRY</h1><hr width="60px" size="2px" color="black" style="color:white;">
+			<p>Indonesia</p>
+			<p>UAE</p>
+			<p>Sri Lanks</p>
+		</div>
+		<div  class="help">
+			<h1>HELP</h1><hr width="50px" size="2px" color="black" style="color:white;">
+			<p>Sitemap</p>
+			<p>FAQs</p>
+			<p>Term and Conditions</p>
+			<p>Privacy Policy</p>
+			<p>Report Content</p>
+		</div>
+	</div>	
+</div>
+
+<div class="icons">
+		<img src="posters/logo/facebook.svg">
+		<img src="posters/logo/twitter.svg">
+		<img src="posters/logo/google.svg">
+		<img src="posters/logo/pintrest.svg">
+		<img src="posters/logo/insta.svg">
+		<img src="posters/logo/tumblr.svg">
+		<img src="posters/logo/whatsapp.svg">
+</div>
+	<div class="right">
+	 <pre>Copyright 2018 © Bigtree Entertainment Pvt. Ltd. All Rights Reserved.<br>
+The content and images used on this site are copyright protected and copyrights vests with the respective owners.
+The usage of the content and images on this website is intended to promote the works and no endorsement of the artist shall be implied. 
+Unauthorized use is prohibited and punishable by law.</pre></div>
+</div>
+
+
+<!-- Javascript -->
+
+<script>
+document.forms['revsystem'].reset();
+
+var modal = document.getElementById('idlogin');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
