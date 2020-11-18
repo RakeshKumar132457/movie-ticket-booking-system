@@ -1,0 +1,22 @@
+{
+  "name": "movie-ticket-booking-system",
+  "version": "1.0.0",
+  "description": "\"A small project for booking movie ticket\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@personal:RoydonRobbins/Movie-Ticket-Booking-System.git"
+  },
+  "author": "Rakesh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
